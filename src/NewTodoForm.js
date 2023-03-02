@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './NewTodoForm.css';
 
 const NewTodoForm = ({ addTodo }) => {
-    const INITIAL_STATE = '';
+    const INITIAL_STATE = { todo: '' };
 
     const [ formData, setFormData ] = useState(INITIAL_STATE);
     const handleChange = (e) => {

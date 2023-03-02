@@ -6,17 +6,14 @@ import './TodoList.css'
 
 const TodoList = () => {
     const INITIAL_STATE = [
-        { key: uuid(), todo: 'Clean Up Dog Poop' }
+        { id: uuid(), todo: 'Clean Up Dog Poop' }
     ]
     const [ todos, setTodos ] = useState(INITIAL_STATE);
     const addTodo = (newTodo) => {
-        setTodos(todos => [...todos, {...newTodo, key: uuid()}])
+        setTodos(todos => [...todos, {...newTodo, id: uuid()}])
     }
-    const removeTodo = (e) => {
-        const todo = e.target.parentNode;
-        let todoList = [...todos];
-        todoList.splice(todo, 1);
-        setTodos(todoList);
+    const removeTodo = (id) => {
+        setTodos(todos => todos.filter(todo => todo.id !== id))
     }
     const editTodo = e => {
         const todo = e.target;
@@ -25,9 +22,10 @@ const TodoList = () => {
     return (
         <div className="TodoList">
             <ol className="TodoList-todos">
-                {todos.map(({ key, todo }) => 
+                {todos.map(({ id, todo }) => 
                     <Todo 
-                        key={key}
+                        key={id}
+                        id={id}
                         todo={todo}
                         removeTodo={ removeTodo }
                         editTodo={ editTodo }
