@@ -1,0 +1,21 @@
+.NewTodoForm {
+    height: 40px;
+    display: flexbox;
+    justify-content: center;
+}
+
+.NewTodoForm-label {
+    display: inline-flexbox;
+    margin-right: 5px;
+    align-items: center;
+}
+
+.NewTodoForm-btn {
+    margin-left: 5px;
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+}

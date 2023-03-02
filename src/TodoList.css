@@ -1,0 +1,8 @@
+.TodoList {
+    text-align: center;
+}
+
+.TodoList-todos {
+    display: inline-block;
+    margin: 10px auto;
+}

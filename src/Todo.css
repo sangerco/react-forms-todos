@@ -1,0 +1,27 @@
+.Todo {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.Todo-edit-btn {
+    margin-right: 5px;
+    margin-left: 10px;
+    background-color: steelblue;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+}
+
+.Todo-delete-btn {
+    margin-right: auto;
+    margin-left: 5px;
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+}
